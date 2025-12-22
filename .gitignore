@@ -1,0 +1,11 @@
+# Project place file
+/Rwitter.rbxlx
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+# Dev Defined Igrnoes
+/Packages/*
+/*.toml
+/*.json
