@@ -7,6 +7,7 @@ local React = require(ReplicatedStorage.Packages.React)
 local ReactRoblox = require(ReplicatedStorage.Packages.ReactRoblox)
 local MainFrame = require(ReplicatedStorage.Shared.components.MainFrame)
 local ComposeFrame = require(ReplicatedStorage.Shared.components.ComposeFrame)
+local Post = require(ReplicatedStorage.Shared.components.Post)
 
 local function BackgroundFrame()
 	return React.createElement("Frame", {
@@ -40,6 +41,7 @@ local function BackgroundFrame()
 					}),
 				}),
 				React.createElement(ComposeFrame, {}, {}),
+				React.createElement(Post, {}, {}),
 			}),
 		}),
 	})
