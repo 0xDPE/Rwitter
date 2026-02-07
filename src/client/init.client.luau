@@ -6,6 +6,7 @@ local Row = require(ReplicatedStorage.Layout.Row)
 local React = require(ReplicatedStorage.Packages.React)
 local ReactRoblox = require(ReplicatedStorage.Packages.ReactRoblox)
 local MainFrame = require(ReplicatedStorage.Shared.components.MainFrame)
+local ComposeFrame = require(ReplicatedStorage.Shared.components.ComposeFrame)
 
 local function BackgroundFrame()
 	return React.createElement("Frame", {
@@ -17,7 +18,7 @@ local function BackgroundFrame()
 				Padding = UDim.new(0, 0),
 				Align = Enum.VerticalAlignment.Top,
 			}, {
-				TopBarFrame = React.createElement("Frame", {
+				React.createElement("Frame", {
 					Size = UDim2.fromScale(1, 0.06),
 					BackgroundColor3 = Color3.fromRGB(0, 0, 0),
 				}, {
@@ -38,28 +39,7 @@ local function BackgroundFrame()
 						}),
 					}),
 				}),
-				ComposeFrame = React.createElement("Frame", {
-					Size = UDim2.fromScale(1, 0.125),
-					BackgroundColor3 = Color3.fromRGB(0, 0, 0),
-				}, {
-					ComposeOutline = React.createElement("UIStroke", {
-						Color = Color3.fromRGB(47, 51, 54),
-						LineJoinMode = Enum.LineJoinMode.Miter,
-					}),
-					ProfilePostRow = React.createElement(Row, {
-						Size = UDim2.fromScale(1, 1),
-					}, {
-						InputBox = React.createElement("TextBox", {
-							Text = "What is happening?",
-							Size = UDim2.fromScale(1, 0.7),
-							TextSize = 14,
-							BackgroundTransparency = 1,
-							TextColor3 = Color3.fromRGB(70, 70, 70),
-							TextXAlignment = Enum.TextXAlignment.Left,
-							TextYAlignment = Enum.TextYAlignment.Top,
-						}),
-					}),
-				}),
+				React.createElement(ComposeFrame, {}, {}),
 			}),
 		}),
 	})

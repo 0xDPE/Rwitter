@@ -18,7 +18,7 @@ local function Column(props: PropType)
 	}, {
 		RowLayout = React.createElement("UIListLayout", {
 			FillDirection = Enum.FillDirection.Vertical,
-			SortOrder = Enum.SortOrder.LayoutOrder,
+			SortOrder = Enum.SortOrder.Name,
 			Padding = props.Padding or UDim.new(0, 8),
 			HorizontalAlignment = props.HorizontalAlign or Enum.HorizontalAlignment.Center,
 			VerticalAlignment = props.Align or Enum.VerticalAlignment.Center,
