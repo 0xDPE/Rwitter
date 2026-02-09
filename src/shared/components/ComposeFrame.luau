@@ -5,6 +5,7 @@ local Row = require(ReplicatedStorage.Shared.layout.Row)
 
 export type PropType = {
 	placeHolderText: string?,
+	UserId: number,
 }
 
 local function ComposeFrame(props: PropType)
@@ -20,7 +21,7 @@ local function ComposeFrame(props: PropType)
 			Size = UDim2.fromScale(1, 1),
 			Flex = Enum.UIFlexAlignment.SpaceAround,
 		}, {
-			React.createElement(PlayerThumbnail, {}, {}),
+			React.createElement(PlayerThumbnail, { UserId = props.UserId }, {}),
 			React.createElement("TextBox", {
 				Text = props.placeHolderText or "Whats happening?",
 				Size = UDim2.fromScale(0.6, 0.8),
